@@ -1,0 +1,14 @@
+{
+  "name": "solved-card",
+  "version": "1.0.0",
+  "description": "github readme solved.ac stats card",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "spblue4422",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^4.5.4"
+  }
+}
