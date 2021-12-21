@@ -9,6 +9,7 @@
   "author": "spblue4422",
   "license": "MIT",
   "devDependencies": {
+    "@vercel/node": "^1.12.1",
     "typescript": "^4.5.4"
   }
 }

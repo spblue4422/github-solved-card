@@ -1,6 +1,6 @@
 import { profile, level, tierMap } from '../types';
 
-export const fetcher = async (username: string) => {
+export const fetcher = async (username: string | string[]) => {
     try {
         const data = await (
             await fetch(`https://solved.ac/api/v3/user/show?handle=${username}`)
@@ -9,27 +9,6 @@ export const fetcher = async (username: string) => {
         return data;
     } catch (err) {
         console.error('fetch Error');
-    }
-};
-
-const tierCalculate = async (tier: number) => {
-    try {
-        const quotient: number = await ((tier - 1) / 5);
-        const remainder: number = await ((tier - 1) % 5); // 5가 0, 4가 1, 3이 2, 2가 3 1이 4
-
-        const retTier: level = tierMap[quotient];
-        const detTier: number = 5 - remainder;
-
-        return {
-            tier: retTier,
-            detTier: detTier
-        };
-    } catch (err) {
-        console.log('calculating error');
-        return {
-            tier: tierMap[7],
-            detTier: 5
-        };
     }
 };
 

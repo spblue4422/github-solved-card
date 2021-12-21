@@ -1,13 +1,15 @@
 import { profile } from '../types';
 import { getTier } from '../utils';
+import { tiers } from '@assets/tier';
+import { classes } from '@assets/class';
 
-interface CardProps {
+export interface CardProps {
     width: number;
     height: number;
     data: profile;
 }
 
-class Card {
+export class Card {
     private width = 500;
     private height = 150;
     private data: profile;
@@ -20,9 +22,9 @@ class Card {
 
     renderCard = async () => {
         //const userCard = new Card(data);
-        const { handle, solvedCount, tier, rating, rank } = this.data;
+        const { handle, solvedCount, tier, rating, rank, cls } = this.data;
 
-        const tierString = getTier(tier);
+        const { tierString, tierNumber } = await getTier(tier);
 
         return `<svg 
             width="${this.width}"
@@ -42,6 +44,7 @@ class Card {
             <g data-testid="card-tier">
                 <text x="10" y="5">${tierString}</text>
                 <foreignObject width="150" height="100" x="10" y="20">
+                    ${tiers[tier]}
                 </foreignObject>
                 <text x="10" y="125">${rating}</text>
             </g>
@@ -49,6 +52,7 @@ class Card {
             <g data-testid="card-profile">
                 <text x="180" y="30">${handle}</text>
                 <foreignObject width="20" hegiht="20">
+                    ${classes[cls]}
                 </foreginObject>
                 <text x="180" y="60">Rank: ${rank}</text>
                 <text x="180" y="90">Solved: ${solvedCount}</text>

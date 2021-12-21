@@ -4,17 +4,10 @@ export interface profile {
     tier: number;
     rating: number;
     rank: number;
+    cls: number;
 }
 
-export type level =
-    | 'Bronze'
-    | 'Silver'
-    | 'Gold'
-    | 'Platinum'
-    | 'Diamond'
-    | 'Ruby'
-    | 'Master'
-    | 'Undefined';
+export type level = 'Bronze' | 'Silver' | 'Gold' | 'Platinum' | 'Diamond' | 'Ruby' | 'Master';
 
 export const tierMap: Record<number, level> = {
     0: 'Bronze',
@@ -23,6 +16,5 @@ export const tierMap: Record<number, level> = {
     3: 'Platinum',
     4: 'Diamond',
     5: 'Ruby',
-    6: 'Master',
-    7: 'Undefined'
+    6: 'Master'
 };
