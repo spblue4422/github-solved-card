@@ -10,8 +10,8 @@ export interface CardProps {
 }
 
 export class Card {
-    private width = 500;
-    private height = 150;
+    private width: number;
+    private height: number;
     private data: profile;
 
     constructor({ width = 500, height = 150, data }: CardProps) {
@@ -21,7 +21,6 @@ export class Card {
     }
 
     renderCard = async () => {
-        //const userCard = new Card(data);
         const { handle, solvedCount, tier, rating, rank, cls } = this.data;
 
         const { tierString, tierNumber } = await getTier(tier);
@@ -57,7 +56,6 @@ export class Card {
                 <text x="180" y="60">Rank: ${rank}</text>
                 <text x="180" y="90">Solved: ${solvedCount}</text>
             </g>
-            
         </svg>`;
     };
 }
