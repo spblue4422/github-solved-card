@@ -7,22 +7,23 @@ export default async (req: VercelRequest, res: VercelResponse) => {
     const name: string | string[] = req.query['handle']; // spblue4422
 
     try {
-        const width: number = 500;
-        const height: number = 150;
-        const rawData = await fetcher(name);
+        //const width: number = 500;
+        //const height: number = 150;
+        const rawData = await fetcher('spblue4422');
 
-        const data: profile = {
-            handle: rawData.handle,
-            solvedCount: rawData.solvedCount,
-            tier: rawData.tier,
-            rating: rawData.rating,
-            rank: rawData.rank,
-            cls: rawData.class
-        };
+        // const data: profile = {
+        //     handle: rawData.handle,
+        //     solvedCount: rawData.solvedCount,
+        //     tier: rawData.tier,
+        //     rating: rawData.rating,
+        //     rank: rawData.rank,
+        //     cls: rawData.class
+        // };
 
-        const newCard = new Card({ width, height, data });
+        //const newCard = new Card({ width, height, data });
 
-        return res.send(newCard.renderCard());
+        //return res.send(newCard.renderCard());
+        return res.send(rawData);
     } catch (err) {
         console.error(err);
         return res.send('API Error');
