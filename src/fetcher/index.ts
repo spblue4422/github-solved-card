@@ -12,5 +12,5 @@ const fetcher = async (username: string | string[]) => {
         console.error('fetch Error');
     }
 };
-
+//
 export default fetcher;
