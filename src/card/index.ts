@@ -20,7 +20,7 @@ class Card {
         this.data = data;
     }
 
-    renderCard = async () => {
+    async render() {
         const { handle, solvedCount, tier, rating, rank, cls } = this.data;
 
         const { tierString, tierNumber } = await getTier(tier);
