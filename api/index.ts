@@ -11,6 +11,9 @@ export default async (req: VercelRequest, res: VercelResponse) => {
         const height: number = 150;
         const rawData = await fetcher('spblue4422');
 
+        console.log(width);
+        console.log(rawData);
+
         const data: profile = {
             handle: rawData.handle,
             solvedCount: rawData.solvedCount,
