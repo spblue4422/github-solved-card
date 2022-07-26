@@ -1,7 +1,7 @@
 import fetch from 'isomorphic-fetch';
 import { profile } from 'src/types';
 
-export const fetcher = async (username: string | string[]) => {
+const fetcher = async (username: string | string[]) => {
     try {
         const data = await fetch(`https://solved.ac/api/v3/user/show?handle=${username}`);
         const result = (await data.json()) as profile;
@@ -12,3 +12,5 @@ export const fetcher = async (username: string | string[]) => {
         console.error('fetch Error');
     }
 };
+
+export default fetcher;

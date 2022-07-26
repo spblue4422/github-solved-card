@@ -3,13 +3,13 @@ import { getTier } from '../utils';
 import { tiers } from '@assets/tier';
 import { classes } from '@assets/class';
 
-export interface CardProps {
+interface CardProps {
     width: number;
     height: number;
     data: profile;
 }
 
-export class Card {
+class Card {
     private width: number;
     private height: number;
     private data: profile;
@@ -59,3 +59,5 @@ export class Card {
         </svg>`;
     };
 }
+
+export default Card;

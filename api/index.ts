@@ -1,5 +1,5 @@
-import { Card } from 'src/card';
-import { fetcher } from 'src/fetcher';
+import Card from 'src/card';
+import fetcher from 'src/fetcher';
 import { profile } from 'src/types';
 import { VercelRequest, VercelResponse } from '@vercel/node';
 
