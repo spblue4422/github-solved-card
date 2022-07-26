@@ -1,6 +1,6 @@
-import Card from 'src/card';
-import fetcher from 'src/fetcher';
-import { profile } from 'src/types';
+import Card from 'src/card/index';
+import fetcher from 'src/fetcher/index';
+import { profile } from 'src/types/index';
 import { VercelRequest, VercelResponse } from '@vercel/node';
 
 export default async (req: VercelRequest, res: VercelResponse) => {
