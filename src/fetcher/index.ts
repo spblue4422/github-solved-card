@@ -1,12 +1,12 @@
 import fetch from 'isomorphic-fetch';
+import { profile } from 'src/types';
 
 export const fetcher = async (username: string | string[]) => {
     try {
-        const data = (await (
-            await fetch(`https://solved.ac/api/v3/user/show?handle=${username}`)
-        ).json()) as any;
+        const data = await fetch(`https://solved.ac/api/v3/user/show?handle=${username}`);
+        const result = (await data.json()) as profile;
 
-        return data;
+        return result;
     } catch (err) {
         console.log(err);
         console.error('fetch Error');

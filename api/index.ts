@@ -9,10 +9,13 @@ export default async (req: VercelRequest, res: VercelResponse) => {
     try {
         const width: number = 500;
         const height: number = 150;
-        const rawData = await fetcher('spblue4422');
 
         console.log(width);
-        console.log(rawData);
+        console.log(height);
+
+        const rawData = await fetcher('spblue4422');
+
+        if (!rawData) throw new Error('no fetch');
 
         const data: profile = {
             handle: rawData.handle,
@@ -20,7 +23,7 @@ export default async (req: VercelRequest, res: VercelResponse) => {
             tier: rawData.tier,
             rating: rawData.rating,
             rank: rawData.rank,
-            cls: rawData.class
+            cls: rawData.cls
         };
 
         const newCard = new Card({ width, height, data });
@@ -29,6 +32,6 @@ export default async (req: VercelRequest, res: VercelResponse) => {
         //return res.send(rawData);
     } catch (err) {
         console.error(err);
-        return res.send('API Error');
+        return res.status(404).send('err');
     }
 };
