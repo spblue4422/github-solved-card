@@ -29,8 +29,7 @@ export default async (req: VercelRequest, res: VercelResponse) => {
 
         const newCard = new Card({ width, height, data });
 
-        return res.send(newCard.render());
-        //return res.send(rawData);
+        return res.send(await newCard.render());
     } catch (err) {
         console.error(err);
         return res.status(404).send('err');
