@@ -1,4 +1,4 @@
-import fetch from 'node-fetch';
+import fetch from 'isomorphic-fetch';
 
 export const fetcher = async (username: string | string[]) => {
     try {
