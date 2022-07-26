@@ -1,7 +1,7 @@
 import { profile } from '../types';
 import { getTier } from '../utils';
-import { tiers } from '@assets/tier';
-import { classes } from '@assets/class';
+import { tiers } from '../../assets/tier';
+import { classes } from '../../assets/class';
 
 interface CardProps {
     width: number;

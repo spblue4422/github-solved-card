@@ -14,9 +14,6 @@ export default async (req: VercelRequest, res: VercelResponse) => {
         const width: number = 500;
         const height: number = 150;
 
-        console.log(width);
-        console.log(height);
-
         const rawData = await fetcher('spblue4422');
 
         if (!rawData) throw new Error('no fetch');
