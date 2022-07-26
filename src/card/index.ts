@@ -34,7 +34,7 @@ class Card {
             <rect
                 x="0"
                 y="0"
-                width="${this.width} - 1"
+                width="${this.width - 1}"
                 height = "99%"
                 fille="#FFFFFF"
                 stroke="#424242"
