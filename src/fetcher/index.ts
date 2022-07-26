@@ -1,5 +1,5 @@
 import fetch from 'isomorphic-fetch';
-import { profile } from 'src/types';
+import { profile } from '../types';
 
 const fetcher = async (username: string | string[]) => {
     try {
