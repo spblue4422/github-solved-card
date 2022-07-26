@@ -4,9 +4,9 @@ import { profile } from '../src/types';
 import { VercelRequest, VercelResponse } from '@vercel/node';
 
 export default async (req: VercelRequest, res: VercelResponse) => {
-    //const name: string | string[] = req.query['handle']; // spblue4422
+    const name: string | string[] = req.query['handle']; // spblue4422
     try {
-        return res.send('name');
+        return res.send(name);
     } catch (err) {
         console.log(err);
     }
