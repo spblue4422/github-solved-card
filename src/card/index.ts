@@ -54,8 +54,8 @@ class Card {
             </g>
 
             <g data-testid="card-profile">
-                <text x="300" y="30" class="handle">${handle}</text>
-                <foreignObject width="40" height="40" x="240" y="40">
+                <text x="290" y="40" class="handle">${handle}</text>
+                <foreignObject width="40" height="40" x="240" y="30">
                     ${classes[cls]}
                 </foreignObject>
                 <text x="240" y="80">Rank: ${rank}</text>
