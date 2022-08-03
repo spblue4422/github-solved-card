@@ -12,7 +12,7 @@ export default async (req: VercelRequest, res: VercelResponse) => {
     // }
     try {
         const width: number = 500;
-        const height: number = 150;
+        const height: number = 200;
 
         const rawData = await fetcher('spblue4422');
 
