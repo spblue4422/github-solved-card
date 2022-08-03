@@ -4,7 +4,7 @@ import { profile } from '../types';
 const fetcher = async (username: string | string[]) => {
     try {
         const data = await fetch(`https://solved.ac/api/v3/user/show?handle=${username}`);
-        const result = (await data.json()) as profile;
+        const result = (await data.json())as any;
 
         return result;
     } catch (err) {

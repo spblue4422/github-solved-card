@@ -46,15 +46,15 @@ class Card {
             />
 
             <g data-testid="card-tier">
-                <text x="20" y="15">${tierString} ${tierNumber}</text>
+                <text x="20" y="15" class="rank">${tierString} ${tierNumber}</text>
                 <foreignObject width="300" height="300" x="10" y="20">
                     ${tiers[tier]}
                 </foreignObject>
-                <text x="30" y="185">${rating}</text>
+                <text x="30" y="185" class="rating">${rating}</text>
             </g>
 
             <g data-testid="card-profile">
-                <text x="180" y="30">${handle}</text>
+                <text x="180" y="30" class="handle">${handle}</text>
                 <foreignObject width="20" hegiht="20">
                     ${classes[cls]}
                 </foreginObject>

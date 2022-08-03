@@ -24,7 +24,7 @@ export default async (req: VercelRequest, res: VercelResponse) => {
             tier: rawData.tier,
             rating: rawData.rating,
             rank: rawData.rank,
-            cls: rawData.cls
+            cls: rawData.class
         };
 
         const newCard = new Card({ width, height, data });
