@@ -50,12 +50,12 @@ class Card {
                 <foreignObject width="300" height="300" x="40" y="25">
                     ${tiers[tier]}
                 </foreignObject>
-                <text x="50" y="135" class="rating">${rating}</text>
+                <text x="60" y="135" class="rating">${rating}</text>
             </g>
 
             <g data-testid="card-profile">
                 <text x="300" y="30" class="handle">${handle}</text>
-                <foreignObject width="120" hegiht="120" x="240" y="40">
+                <foreignObject width="120" height="120" x="240" y="40">
                     ${classes[cls]}
                 </foreignObject>
                 <text x="240" y="80">Rank: ${rank}</text>
