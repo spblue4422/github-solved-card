@@ -47,7 +47,7 @@ class Card {
 
             <g data-testid="card-tier">
                 <text x="50" y="20" class="rank">${tierString}</text>
-                <foreignObject width="300" height="300" x="40" y="25">
+                <foreignObject width="300" height="400" x="40" y="25">
                     ${tiers[tier]}
                 </foreignObject>
                 <text x="60" y="135" class="rating">${rating}</text>
