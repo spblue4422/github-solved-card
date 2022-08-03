@@ -45,7 +45,7 @@ class Card {
                 y="0"
                 width="${this.width - 1}"
                 height = "99%"
-                fille="#FFFFFF"
+                fill="#FFFFFF"
                 stroke="#424242"
             />
 
