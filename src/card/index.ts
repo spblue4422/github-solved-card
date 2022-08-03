@@ -35,6 +35,10 @@ class Card {
                 text {
                     fill: black;
                 }
+
+                .cls-2 {
+                    fill: white;
+                }
             </style>
             <rect
                 x="0"
@@ -55,11 +59,11 @@ class Card {
 
             <g data-testid="card-profile">
                 <text x="290" y="40" class="handle">${handle}</text>
-                <foreignObject width="40" height="40" x="240" y="30">
+                <foreignObject width="40" height="40" x="240" y="20">
                     ${classes[cls]}
                 </foreignObject>
-                <text x="240" y="80">Rank: ${rank}</text>
-                <text x="240" y="120">Solved: ${solvedCount}</text>
+                <text x="260" y="80">Rank  ${rank}</text>
+                <text x="260" y="120">Solved  ${solvedCount}</text>
             </g>
         </svg>`;
     }
