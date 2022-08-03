@@ -31,6 +31,11 @@ class Card {
             viewBox = "0 0 ${this.width} ${this.height}"
             fill= "none"
             xmlns="http://www.w3.org/2000/svg">
+            <style>
+                text {
+                    fill: black;
+                }
+            </style>
             <rect
                 x="0"
                 y="0"
