@@ -46,20 +46,20 @@ class Card {
             />
 
             <g data-testid="card-tier">
-                <text x="20" y="25" class="rank">${tierString}</text>
-                <foreignObject width="300" height="300" x="10" y="20">
+                <text x="50" y="20" class="rank">${tierString}</text>
+                <foreignObject width="300" height="300" x="40" y="25">
                     ${tiers[tier]}
                 </foreignObject>
-                <text x="30" y="125" class="rating">${rating}</text>
+                <text x="50" y="135" class="rating">${rating}</text>
             </g>
 
             <g data-testid="card-profile">
-                <text x="210" y="30" class="handle">${handle}</text>
-                <foreignObject width="40" hegiht="40" x="180" y="40">
+                <text x="300" y="30" class="handle">${handle}</text>
+                <foreignObject width="120" hegiht="120" x="240" y="40">
                     ${classes[cls]}
                 </foreignObject>
-                <text x="180" y="80">Rank: ${rank}</text>
-                <text x="180" y="120">Solved: ${solvedCount}</text>
+                <text x="240" y="80">Rank: ${rank}</text>
+                <text x="240" y="120">Solved: ${solvedCount}</text>
             </g>
         </svg>`;
     }
