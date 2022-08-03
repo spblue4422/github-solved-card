@@ -59,11 +59,13 @@ class Card {
 
             <g data-testid="card-profile">
                 <text x="290" y="40" class="handle">${handle}</text>
-                <foreignObject width="40" height="40" x="240" y="20">
+                <foreignObject width="40" height="40" x="240" y="15">
                     ${classes[cls]}
                 </foreignObject>
-                <text x="260" y="80">Rank  ${rank}</text>
-                <text x="260" y="120">Solved  ${solvedCount}</text>
+                <text x="240" y="90">Rank</text>
+                <text x="280" y="90">${rank}</text>
+                <text x="240" y="120">Solved</text>
+                <text x="280" y="120">${solvedCount}</text>
             </g>
         </svg>`;
     }
