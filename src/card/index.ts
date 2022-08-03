@@ -14,7 +14,7 @@ class Card {
     private height: number;
     private data: profile;
 
-    constructor({ width = 500, height = 200, data }: CardProps) {
+    constructor({ width = 500, height = 150, data }: CardProps) {
         this.width = width;
         this.height = height;
         this.data = data;
@@ -46,20 +46,20 @@ class Card {
             />
 
             <g data-testid="card-tier">
-                <text x="20" y="15" class="rank">${tierString} ${tierNumber}</text>
+                <text x="20" y="25" class="rank">${tierString}</text>
                 <foreignObject width="300" height="300" x="10" y="20">
                     ${tiers[tier]}
                 </foreignObject>
-                <text x="30" y="185" class="rating">${rating}</text>
+                <text x="30" y="125" class="rating">${rating}</text>
             </g>
 
             <g data-testid="card-profile">
                 <text x="210" y="30" class="handle">${handle}</text>
-                <foreignObject width="20" hegiht="20" x="180" y="30">
+                <foreignObject width="40" hegiht="40" x="180" y="40">
                     ${classes[cls]}
                 </foreignObject>
-                <text x="180" y="60">Rank: ${rank}</text>
-                <text x="180" y="90">Solved: ${solvedCount}</text>
+                <text x="180" y="80">Rank: ${rank}</text>
+                <text x="180" y="120">Solved: ${solvedCount}</text>
             </g>
         </svg>`;
     }
