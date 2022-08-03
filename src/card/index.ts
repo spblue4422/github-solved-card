@@ -63,9 +63,9 @@ class Card {
                     ${classes[cls]}
                 </foreignObject>
                 <text x="240" y="90">Rank</text>
-                <text x="280" y="90">${rank}</text>
+                <text x="340" y="90">${rank}</text>
                 <text x="240" y="120">Solved</text>
-                <text x="280" y="120">${solvedCount}</text>
+                <text x="360" y="120">${solvedCount}</text>
             </g>
         </svg>`;
     }
